@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crear Matrices</title>
+</head>
+
+<body>
+    <h1>Crear matrices</h1>
+
+    <label for="fila">Fila</label>
+    <input type="text" name="fila" id="fila">
+    <br><br>
+    <label for="columna">Columna</label>
+    <input type="text" name="columna" id="columna">
+    <br><br>
+    <input type="button" value="Generar" id="btGenerar">
+
+</body>
+<script src="js/matriz.js"></script>
+<script>
+    //Autora:Carolina Chamorro
+    // El usuario crea filas y columnas
+    matriz = [];
+    acumulador = 0;
+    document.getElementById("btGenerar").addEventListener("click", function (laColumna,laFila) {
+          
+        for (i = 0; i < document.getElementById("columna").value; i++) {
+            matriz.push(new Array);
+            for (k = 0; k <document.getElementById("fila").value; k++) {
+                acumulador++
+                matriz.push(acumulador);
+            }
+        }
+
+    })
+
+</script>
+
+</html>
